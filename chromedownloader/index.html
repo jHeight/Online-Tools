@@ -5,17 +5,21 @@
     <meta charset="UTF-8" />
     <script src="script.js"></script>
     <script>
-      ccCallbutton.addEventListener("click", downloader());
-      ccCallbutton.onclick = downloader();
-      function downloader() {
-        var chromeCode = document.getElementByID("ccCallBox").value;
-        var fSite = "https://clients2.google.com/service/update/crx?response=redirecr&prodversion=49.0&x=id%3d" + chromeCode + "%26installsource%3Dondemand%26uc";
-        
-        window.open(fSite);
-        
-        // All rights reserved.
-        // A Serum INC Project
-        // Copyright (C) 2017 jHeight INC
+     ccCallbutton.addEventListener("click", downloader)
+ccCallbutton.onclick = function()downloader
+
+function downloader() {
+	var chromeCode = document.getElementByID("ccCallbox").value; // Calls for Script
+	var returnSite = "https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D" + chromeCode + "%26installsource%3Dondemand%26uc"; //Defines Site
+
+	window.open(returnSite) // Downloads Extension
+}
+
+
+// All rights reserved.
+// A Serum INC Project
+// Copyright (C) 2017 jHeight INC
+
     </script>
   </head>
   <body>
