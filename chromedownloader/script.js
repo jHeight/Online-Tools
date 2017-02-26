@@ -1,11 +1,13 @@
-ccCallbutton.addEventListener("click", downloader)
-ccCallbutton.onclick = function()downloader
+var ccCallbutton = document.getElementByID("ccCallbutton");
+
+ccCallbutton.addEventListener("click", downloader);
+ccCallbutton.onclick = downloader();
 
 function downloader() {
 	var chromeCode = document.getElementByID("ccCallbox").value; // Calls for Script
 	var returnSite = "https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D" + chromeCode + "%26installsource%3Dondemand%26uc"; //Defines Site
 
-	window.open(returnSite) // Downloads Extension
+	window.open(returnSite); // Downloads Extension
 }
 
 
