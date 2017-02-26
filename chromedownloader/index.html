@@ -4,10 +4,21 @@
     <title> Chrome Extension Downloader </title>
     <meta charset="UTF-8" />
     <script src="script.js"></script>
+    <script>
+      function downloader() {
+        var chromeCode = document.getElementByID("ccCallBox").value;
+        var fSite = "https://clients2.google.com/service/update/crx?response=redirecr&prodversion=49.0&x=id%3d" + chromeCode + "%26installsource%3Dondemand%26uc";
+        
+        window.open(fsite)
+        
+        // All rights reserved.
+        // A Serum INC Project
+        // Copyright (C) 2017 jHeight INC
+    </script>
   </head>
   <body>
   <h3> Chrome ID: </h3>
   <input type="text" name="ccCallbox" id="ccCallbox"></input>
-  <button type="button" id="ccCallbutton">Download Extension</button>
+  <button type="button" id="ccCallbutton" onclick="script.js">Download Extension</button>
   </body>
   </html>
