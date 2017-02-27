@@ -5,14 +5,15 @@
 <meta charset="UTF-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
+var req = newXMLHttpRequest();
+req.open('GET', document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+var download = headers.contains(".mp4",".flv",".mov",".webm");
+
 function function() {
-var r=xhr.responeText;
-r=r.substring(r.indexOf('url_enclosed_fmt_stream_map'),r.length);
-r=r.substring(r.indexOf('url=http')+4,r.length);
-r=r.split('url=');
-location.href = decodeURIComponent(r[0].substring(0,r[0].indexOf('\\\\')));
-};
-xhr.send();
+window.open(download);
+}
 </script>
 </head>
 <body>
