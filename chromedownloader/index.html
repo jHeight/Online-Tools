@@ -4,21 +4,21 @@
     <title> Chrome Extension Downloader </title>
     <meta charset="UTF-8" />
     <script src="script.js"></script>
-    <script>
-      function downloader() {
-        var chromeCode = document.getElementByID("ccCallBox").value;
-        var fSite = "https://clients2.google.com/service/update/crx?response=redirecr&prodversion=49.0&x=id%3d" + chromeCode + "%26installsource%3Dondemand%26uc";
-        
-        window.open(fsite)
-        
-        // All rights reserved.
-        // A Serum INC Project
-        // Copyright (C) 2017 jHeight INC
-    </script>
+	<style>
+	.status {
+		color: yellow;
+	}
+	.ccCallbutton {
+		border: 1px solid white;
+		border-radius: 25px;
+	}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
+  <h4> Status: </h4><h4 id="status">[Maintenance]: Not functioning on Chromnium Browsers</h4><h4>Don't know if you are on Chromnium? Type <a href="chrome://extensions">chrome://about</a> to find out
   <h3> Chrome ID: </h3>
   <input type="text" name="ccCallbox" id="ccCallbox"></input>
-  <button type="button" id="ccCallbutton" onclick="script.js">Download Extension</button>
+  <button type="button" id="ccCallbutton" onclick="main()">Download Extension</button>
   </body>
   </html>

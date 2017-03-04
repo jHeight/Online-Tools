@@ -1,14 +1,5 @@
-ccCallbutton.addEventListener("click", downloader)
-ccCallbutton.onclick = function()downloader
-
-function downloader() {
-	var chromeCode = document.getElementByID("ccCallbox").value; // Calls for Script
-	var fSite = "https://clients2.google.com/service/update/crx?response=redirecr&prodversion=49.0&x=id%3d" + chromeCode + "%26installsource%3Dondemand%26uc"; //Defines Site
-
-	window.open(fsite) // Downloads Extension
+function main(){
+	var extensionID = document.getElementById('ccCallbox').value;
+	$('a#ccCallbutton').attr({target: '_blank', 
+                    href  : 'https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D'+extensionID+'%26installsource%3Dondemand%26uc'});
 }
-
-
-// All rights reserved.
-// A Serum INC Project
-// Copyright (C) 2017 jHeight INC
