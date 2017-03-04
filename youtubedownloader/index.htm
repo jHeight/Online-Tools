@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> YouTube Video Downloader </title>
+<meta charset="UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+var req = newXMLHttpRequest();
+req.open('GET', document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+var download = headers.contains(".mp4",".flv",".mov",".webm");
+
+function function() {
+window.open(download);
+}
+</script>
+</head>
+<body>
+<input type="text" name="ccCallbox" id="ccCallbox">
+<button type="button" id="ccCallbutton" onClick="function()"> Convert YouTube Video to MP4 </button>
+</body>
+</html>
